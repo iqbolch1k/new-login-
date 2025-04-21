@@ -42,7 +42,7 @@ function Register() {
       await register(formData.username, formData.password, formData.email, formData.first_name, formData.last_name);
       setError(true);
       setErrorText({ Text: "Muvaffaqiyatli ro'yxatdan o'tdingiz!", color: 'text-green-600' });
-      setTimeout(() => setError(false), 8000);
+      setTimeout(() => setError(false), 10000);
     } catch (error) {
       setError(true);
       setErrorText({ Text: "Ma'lumotlaringiz talabga javob bermaydi!", color: 'text-red-600' });

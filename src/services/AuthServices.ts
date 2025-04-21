@@ -35,6 +35,5 @@ export const register = async (
     if (!response.ok) {
         throw new Error("Login xatosi!")
     }
-
     window.location.href = '/login'
 }

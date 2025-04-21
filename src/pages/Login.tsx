@@ -42,13 +42,12 @@ function Login() {
         try {
             await login(formData.username, formData.password);
             setError(true);
+            setTimeout(() => setError(false), 25000);
             setErrorText({ Text: "Tizimga muvaffaqiyatli kirdingiz!", color: 'text-green-600' });
-            setTimeout(() => setError(false), 8000);
         } catch (err) {
             setError(true);
             setErrorText({ Text: "Xato login parol kiritdingiz.", color: 'text-red-600' });
-            setTimeout(() => setError(false), 8000);
-
+            setTimeout(() => setError(false), 15000);
         }
         setFormData(
             {
