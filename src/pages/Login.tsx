@@ -58,7 +58,7 @@ function Login() {
     return (
         <div className="md:px-5 sm:px-5 continer max-[640px]:px-3 relative">
             <div className="flex items-center justify-between">
-                <div className="flex flex-col gap-10 items-center justify-center w-full px-4  py-10">
+                <div className="flex gap-10 items-center justify-center w-full px-4  py-10">
                     <div className="w-full md:w-1/2 max-w-xl flex flex-col justify-center">
                         <ErrorModal
                             title={errorText.Text}
