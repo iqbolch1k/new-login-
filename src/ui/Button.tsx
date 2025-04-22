@@ -5,6 +5,8 @@ interface ButtonUiProps {
     type?: "button" | "submit" | "reset";
     disabled?: boolean;
     className?: string;
+    isLoading?: boolean;
+    loadingText?: string;
 }
 
 function Button({
@@ -13,16 +15,18 @@ function Button({
     onClick,
     type = "button",
     disabled = false,
-    className = ""
+    className = "",
+    isLoading = false,
+    loadingText = "Yuklanmoqda..."
 }: ButtonUiProps) {
     return (
         <button
             type={type}
             onClick={onClick}
-            disabled={disabled}
+            disabled={disabled || isLoading}
             className={`w-${width} mt-5 h-12 bg-[#607AFB] text-white rounded-xl font-semibold hover:bg-[#455dd3c0] transition-all disabled:opacity-50 ${className}`}
         >
-            {text}
+            {isLoading ? loadingText : text}
         </button>
     );
 }

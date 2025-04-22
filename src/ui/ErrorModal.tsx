@@ -4,7 +4,7 @@ function ErrorModal({ title, className }: { title: string, className?: string })
             <div
                 className={`
                     modal ${className}
-                    absolute top-10 left-1/2 z-40 -translate-x-1/2
+                    fixed top-10 left-1/2 z-40 -translate-x-1/2
                     transition-all duration-500 ease-in-out
                 `}
             >

@@ -1,5 +1,5 @@
-import { API_URL } from "../api"
-import { setTokens } from "../api/config/tokenConfig"
+import { API_URL } from ".."
+import { setTokens } from "../config/tokenConfig"
 
 export const login = async (username: string, password: string) => {
     const response = await fetch(`${API_URL}/token/`, {
